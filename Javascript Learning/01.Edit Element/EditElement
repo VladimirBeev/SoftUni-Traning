@@ -1,0 +1,7 @@
+const element = document.getElementsByTagName('title')[0];
+let text = element.textContent;
+console.log(text);
+let element1 = document.getElementById('e1').textContent.innerHTML = 'hehe';
+//let element2 = element1.innerHTML = 'Heeeeeeeelllooooo!';
+console.log(element1);
+document.write(new DataView());
