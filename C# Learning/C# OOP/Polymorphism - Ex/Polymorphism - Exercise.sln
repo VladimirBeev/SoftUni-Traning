@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicles", "Vehicles\Vehicles.csproj", "{39C90818-1657-43F4-810F-E11A8AF1830E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiding", "Raiding\Raiding.csproj", "{42295A41-C248-45BD-91DE-82E7160834BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildFarm", "Wild Farm\WildFarm.csproj", "{B3707D7E-6CFD-4769-8262-5F1547C20A21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39C90818-1657-43F4-810F-E11A8AF1830E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C90818-1657-43F4-810F-E11A8AF1830E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C90818-1657-43F4-810F-E11A8AF1830E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C90818-1657-43F4-810F-E11A8AF1830E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42295A41-C248-45BD-91DE-82E7160834BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42295A41-C248-45BD-91DE-82E7160834BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42295A41-C248-45BD-91DE-82E7160834BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42295A41-C248-45BD-91DE-82E7160834BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3707D7E-6CFD-4769-8262-5F1547C20A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3707D7E-6CFD-4769-8262-5F1547C20A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3707D7E-6CFD-4769-8262-5F1547C20A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3707D7E-6CFD-4769-8262-5F1547C20A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22AAEDC0-F851-4C4D-BF5F-BF5978A88D1A}
+	EndGlobalSection
+EndGlobal
