@@ -1,17 +1,27 @@
 ﻿@{
-	ViewBag.Title = "Nums 1..." + ViewBag.Count;
+	if (ViewBag.Count > 0)
+	{
+		ViewBag.Title = "Nums 1..." + ViewBag.Count;
+	}
+	else
+	{
+		ViewBag.Title = "Num 1...N";
+	}
 }
-
 <h2>@ViewBag.Title</h2>
+@if (ViewBag.Count > 0)
+{
 <ul>
-	@for (int i = 0; i < ViewBag.Count; i++)
+	@for (int i = 0; i <= ViewBag.Count; i++)
 	{
 		<li>@i</li>
 	}
 </ul>
-<div>
-	<label for="ContactName">Contact Name:</label>
-	<input type="text" name="ContactName" value="" />
-	<input type="submit" />
-</div>
+}
+<form asp-controller="Home" asp-action="NumbersToN" method="post">
+	<div>
+		<input type="text" name="count" value="" />
+		<input type="submit"/>
+	</div>
+</form>
 
