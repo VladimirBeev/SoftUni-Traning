@@ -31,14 +31,21 @@ namespace MVCIntroDemo.Controllers
 					Price = 1.50
 				}
 			};
+
+
+		[ActionName("My-Products")]
 		public IActionResult All()
 		{
 			return View(_products);
 		}
+
+
 		public IActionResult Index()
 		{
 			return View();
 		}
+
+
 		public IActionResult ById(int id) 
 		{
 			var product = _products.FirstOrDefault(x => x.Id == id);
@@ -48,6 +55,8 @@ namespace MVCIntroDemo.Controllers
 			}
 			return View(product);
 		}
+
+
 		public IActionResult AllAsJson()
 		{
 			var options = new JsonSerializerOptions
@@ -56,6 +65,8 @@ namespace MVCIntroDemo.Controllers
 			};
 			return Json(_products, options);
 		}
+
+
 		public IActionResult AllAsText()
 		{
 			var text = string.Empty;
@@ -66,6 +77,8 @@ namespace MVCIntroDemo.Controllers
 			}
 			return Content(text);
 		}
+
+
 		public IActionResult AllAsTextFile()
 		{
 			StringBuilder sb = new StringBuilder();
