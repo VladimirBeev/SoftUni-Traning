@@ -34,8 +34,15 @@ namespace MVCIntroDemo.Controllers
 
 
 		[ActionName("My-Products")]
-		public IActionResult All()
+		public IActionResult All(string keyword)
 		{
+			if (keyword != null)
+			{
+				var foundProducts = _products
+					.Where(p => p.Name.ToLower()
+						.Contains(keyword.ToLower()));
+				return View(foundProducts);
+			}
 			return View(_products);
 		}
 
