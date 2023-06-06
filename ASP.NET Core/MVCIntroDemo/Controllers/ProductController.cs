@@ -35,5 +35,14 @@ namespace MVCIntroDemo.Controllers
 		{
 			return View();
 		}
+		public IActionResult ById(int id) 
+		{
+			var product = _products.FirstOrDefault(x => x.Id == id);
+			if (product == null)
+			{
+				return BadRequest();
+			}
+			return View(product);
+		}
 	}
 }
