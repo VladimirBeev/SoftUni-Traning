@@ -32,10 +32,20 @@ namespace MVCIntroDemo.Controllers
         {
             return View();
         }
-        public IActionResult NumbersToN(int count = 3)
+
+
+        [HttpGet]
+        public IActionResult NumbersToN()
         {
-            ViewBag.Count = count;
-            return View();
+            ViewData["Count"] = -1;
+            return this.View();
+        }
+
+        [HttpPost]
+        public IActionResult NumbersToN(int count = -1)
+        {
+			ViewData["Count"] = count;
+            return this.View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
