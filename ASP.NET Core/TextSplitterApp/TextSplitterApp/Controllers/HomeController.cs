@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TextSplitterApp.Models;
+using TextSplitterApp.Models.TextSplitterModel;
 
 namespace TextSplitterApp.Controllers
 {
@@ -13,14 +14,24 @@ namespace TextSplitterApp.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index()
+		public IActionResult Index(TextViewModel model)
 		{
-			return View();
+			return View(model);
 		}
 
 		public IActionResult Privacy()
 		{
 			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Split(TextViewModel model)
+		{
+			var splitTexArray = model.Text.Split(" ",StringSplitOptions.RemoveEmptyEntries).ToArray();
+
+			model.SplitText = string.Join(Environment.NewLine, splitTexArray);
+
+			return RedirectToAction("Index",model);
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
