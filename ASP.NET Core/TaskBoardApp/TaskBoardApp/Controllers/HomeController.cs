@@ -1,17 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using TaskBoardApp.Models;
-
-namespace TaskBoardApp.Controllers
+﻿namespace TaskBoardApp.Controllers
 {
+	using Microsoft.AspNetCore.Mvc;
+	using Models;
+	using System.Diagnostics;
+
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
 
-		public HomeController(ILogger<HomeController> logger)
-		{
-			_logger = logger;
-		}
+		public HomeController(ILogger<HomeController> logger) 
+			=> _logger = logger;
 
 		public IActionResult Index()
 		{
