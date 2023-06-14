@@ -4,6 +4,10 @@ namespace Library.Contractors
 {
 	public interface IBookService
 	{
-		Task<IEnumerable<AllBookViewModel>> GetAllBooks();
+        Task AddBook(AddBookViewModel viewModel);
+        Task<IEnumerable<AllBookViewModel>> GetAllBooks();
+
+		Task<AddBookViewModel> PullCategoriesBook();
+
     }
 }
