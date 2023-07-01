@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library.Service
 {
-	public class BookService : IBookService
+    public class BookService : IBookService
 	{
 		private readonly LibraryDbContext dbContext;
 
@@ -24,10 +24,12 @@ namespace Library.Service
 					Name = c.Name,
 				})
 				.ToListAsync();
+
 			var model = new AddBookViewModel
 			{
 				Category = categories
 			};
+
 			return model;
 		}
 
@@ -42,7 +44,8 @@ namespace Library.Service
 					Rating = b.Rating,
 					ImageUrl = b.ImageUrl,
 					Category = b.Category.Name
-				}).ToListAsync();
+				})
+				.ToListAsync();
 		}
 
         public async Task AddBook(AddBookViewModel viewModel)
@@ -120,7 +123,7 @@ namespace Library.Service
 
 			if (bookkkk != null)
 			{
-                dbContext.Remove(bookkkk.BookId);
+                dbContext.IdentityUserBooks.Remove(bookkkk);
 				await dbContext.SaveChangesAsync();
             }
         }

@@ -15,6 +15,7 @@ namespace Library.Controllers
 			this.bookService = bookService;
 		}
 
+		[HttpGet]
 		public async Task<IActionResult> All()
 		{
 			var model = await bookService.GetAllBooks();
@@ -42,6 +43,8 @@ namespace Library.Controllers
 			return RedirectToAction(nameof(All));
 		}
 
+
+		[HttpGet]
 		public async Task<IActionResult> Mine()
 		{
 			var model = await bookService.GetMyBooks(GetUserId());
@@ -49,6 +52,8 @@ namespace Library.Controllers
 			return View(model);
 		}
 
+
+		[HttpPost]
 		public async Task<IActionResult> AddToCollection(int id)
 		{
 			var book = await bookService.GetBookById(id);
@@ -65,6 +70,7 @@ namespace Library.Controllers
 			return RedirectToAction(nameof(All));
 		}
 
+		[HttpPost]
 		public async Task<IActionResult> RemoveFromCollection(int id)
 		{
 			var book = await bookService.GetBookById(id);
